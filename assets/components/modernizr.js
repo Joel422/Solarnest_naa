@@ -21,7 +21,18 @@
  * Authors        Faruk Ates, Paul Irish, Alex Sexton
  * Contributors   Ryan Seddon, Ben Alman
  */
-
+/*@cc_on @*/  
+/*@  
+    document.write("JavaScript version: " + @_jscript_version + ".");  
+    document.write("<br />");  
+    @if (@_win32)  
+        document.write("Running on the 32-bit version of Windows.");  
+    @elif (@_win16)  
+        document.write("Running on the 16-bit version of Windows.");  
+    @else  
+        document.write("Running on a different operating system.");  
+    @end  
+@*/  
 window.Modernizr = (function( window, document, undefined ) {
 
     var version = '2.6.2',
